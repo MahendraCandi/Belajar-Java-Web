@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Belajar JQuery</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstra.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<center>
+			<h1>Belajar JQuery</h1>
+			<hr>
+		</center>
+		<br>
+		<br>
+		<h3>JQuery look up on html elements</h3>
+		<p id="p1">
+			(Using tag id) Like CSS .class or #id
+		</p>
+		<p class="p1">
+			(Using tag class) Like CSS .class or #id
+		</p>
+		<button class="btn btn-primary" id="btn1">Id Selector</button>
+		<button class="btn btn-primary" id="btn2">Class Selector</button>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#btn1").click(function() {
+					$("#p1").hide();
+				});
+			});
+			$(document).ready(function() {
+				$("#btn2").click(function() {
+					$(".p1").hide();
+				});
+			});
+		</script>
+		<h3>Klik On HTML Element</h3>
+		<p class="p2">
+			Coba Klik Aku donk!
+		</p>
+		<p class="p2">
+			Coba Klik Aku yaa!
+		</p>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".p2").click(function() {
+					$(this).hide();
+				});
+			});
+		</script>
+		<h3>Double Klik On HTML Element</h3>
+		<p id="p3">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+		</p>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#p3").dblclick(function(event) {
+					$(this).hide();
+				});
+			});
+		</script>
+		<h3>Mouse Enter</h3>
+		<p class="col-xs-4" id="p4" style="background: #099">
+			Enter On Me, Please 
+		</p>
+		<div class="clearfix"></div>
+		<p class="col-xs-4" id="p5" style="background: #870">
+			Me too, please
+		</p>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#p4").mouseenter(function(event) {
+					alert("Yeah first paragraph entered!");
+				});
+			});
+
+			$(document).ready(function() {
+				$("#p5").mouseenter(function(event) {
+					alert("Oh second paragraph entered!");
+				});
+			});
+		</script>
+		<div class="clearfix"></div>
+		<h3>Mouse Leave</h3>
+		<p class="col-xs-4" id="p6" style="background: #099">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#p6").mouseleave(function(event) {
+					alert("You are leaving the paragraph");
+				});
+			});
+		</script>
+		<div class="clearfix"></div>
+		<h3>Hover</h3>
+		<p class="col-xs-4" id="p7" style="background: #099">
+			Hover adalah pengabungan mouse enter dengan mouse leave.
+		</p>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#p7").hover(function() {
+					alert("You entered this paragraph");
+				}, function() {
+					alert("You leave paragraph");
+				});
+			});
+		</script>
+		<div class="clearfix"></div>
+		<h3>Focus</h3>
+		<div class="col-sm-3">
+			<div class="form-group">
+				<label>Focus cursor to input</label>
+				<input type="text" class="form-control" id="txt1" name="">
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#txt1").focus(function(event) {
+					/* Act on the event */
+					$(this).css('background-color', '#cccccc');
+				});
+			});
+		</script>
+		<div class="clearfix"></div>
+		<h3>Blur</h3>
+		<p>
+			The function executed when the form field loses focus.
+		</p>
+		<div class="col-sm-3">
+			<div class="form-group">
+				<label>Focus cursor to input</label>
+				<input type="text" class="form-control" id="txt2" name="">
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#txt2").focus(function(event) {
+					/* Act on the event */
+					$(this).css('background-color', '#cccccc');
+				});
+				$("#txt2").blur(function(event){
+					$(this).css('background-color', '#ffffff');
+				});
+			});
+		</script>
+		<div class="clearfix"></div>
+		<h3>On</h3>
+		<p class="col-xs-4" id="p8">
+			Mouse enter, mouse leave and click to me!
+		</p>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#p8").on({
+					mouseenter: function(){
+						$(this).css('background-color', 'lightgray');
+					},
+					mouseleave: function(){
+						$(this).css('background-color', 'lightblue');
+					},
+					click: function(){
+						$(this).css('background-color', 'yellow');
+					}
+				});
+			});
+		</script>
+		<div class="clearfix"></div>
+		<br>
+		<br>
+
+
+		<center>
+			<h1>JQuery Effect</h1>
+			<hr>
+		</center>
+		
+
+
+		<h3>Hide and Show</h3>
+		<div class="col-sm-offset-4">
+			<p id="p9">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<br>
+				<br>
+				Toggle adalah function method untuk hide dan show.
+			</p>
+			<button class="btn btn-danger" id="btn3">Hide</button>
+			<button class="btn btn-primary" id="btn4">show</button>
+			<button class="btn btn-success" id="btn5">Toggle</button>
+
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#btn3").click(function(event) {
+					$("#p9").hide(1000);
+				});
+				$("#btn4").click(function(event) {
+					$("#p9").show(1000);
+				});
+				$("#btn5").click(function(event) {
+					$("#p9").toggle(2000);
+				});
+			});
+		</script>
+		<div class="clearfix"></div>
+		<h3>Fade In, Fade Out, Fade Toggle, Fade To</h3>
+		<button id="btn6" class="btn btn-primary">Fade In</button>
+		<button id="btn7" class="btn btn-danger">Fade Out</button>
+		<button id="btn8" class="btn btn-success">Fade Toggle</button>
+		<button id="btn9" class="btn btn-warning">Fade To</button>
+		<br>
+		<br>
+		<div id="div1" class="col-xs-4" style="display: none; width: 80px; height: 80px; background-color: red; margin-left: 5px; margin-right: 5px">
+		</div>
+		<div id="div2" class="col-xs-4" style="display: none; width: 80px; height: 80px; background-color: green; margin-left: 5px; margin-right: 5px">
+		</div>
+		<div id="div3" class="col-xs-4" style="display: none; width: 80px; height: 80px; background-color: blue; margin-left: 5px; margin-right: 5px">
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#btn6").click(function(event) {
+					$("#div1").fadeIn("fast");
+					$("#div2").fadeIn(3000);
+					$("#div3").fadeIn("slow");
+				});
+				$("#btn7").click(function(event) {
+					$("#div1").fadeOut(4000);
+					$("#div2").fadeOut(2000);
+					$("#div3").fadeOut("fast");
+				});
+				$("#btn8").click(function(event) {
+					$("#div1").fadeToggle(1000);
+					$("#div2").fadeToggle(1000);
+					$("#div3").fadeToggle(1000);
+				});
+				$("#btn9").click(function(event) {
+					$("#div1").fadeTo(2000, 0.15);
+					$("#div2").fadeTo(2000, 0.50);
+					$("#div3").fadeTo(2000, 0.3);
+				});
+			});
+		</script>
+		<div class="clearfix"></div>
+		<h3>Slide</h3>
+		<div class="text-center">
+			
+			<div id="div4a" style="padding: 5px; background-color: #e5eecc;border: solid 1px;">
+				Click me to slide down!
+			</div>
+			<div id="div4b" style="padding: 50px; display: none; background-color: #e5eecc; border: solid 1px;">
+				Hello World!
+			</div>
+			<div id="div5a" style="padding: 5px; background-color: #e5eecc;border: solid 1px;">
+				Click me to slide up!
+			</div>
+			<div id="div5b" style="padding: 5px; background-color: #e5eecc;border: solid 1px;">
+				Click me to slide toggle!
+			</div>
+			<div id="div5c" style="padding: 50px; display: none; background-color: #e5eecc; border: solid 1px;">
+				Hello World!
+			</div>
+			
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#div4a").click(function(event) {
+					$("#div4b").slideDown("slow");
+				});
+				$("#div5a").click(function(event) {
+					$("#div4b").slideUp("slow");
+				});
+				$("#div5b").click(function(event) {
+					$("#div5c").slideToggle("slow");
+				});
+			});
+		</script>
+
+		<h3>Animation</h3>
+		<p>Click on the box!</p>
+		<div id="div6" style="width: 80px; height: 80px; background-color: red; margin-left: 5px; margin-right: 5px; position: absolute;">
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div id="div7" style="width: 80px; height: 80px; background-color: blue; margin-left: 5px; margin-right: 5px; position: absolute;">
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div id="div8" style="width: 80px; height: 80px; background-color: yellow; margin-left: 5px; margin-right: 5px; position: absolute;">
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<button id="btn10" class="btn btn-success">Klik me!</button>
+		<br>
+		<br>
+		<div id="div9" style="width: 80px; height: 80px; background-color: purple; margin-left: 5px; margin-right: 5px; position: absolute;">
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<button id="btn11" class="btn btn-success">Klik me!</button>
+		<br>
+		<br>
+		<div id="div10" style="width: 80px; height: 80px; background-color: green; margin-left: 5px; margin-right: 5px; position: absolute;">
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#div6").click(function(event) {
+					$("#div6").animate({left: '250px'});
+				});
+				$("#div7").click(function(event) {
+					$("#div7").animate({
+						left: '250px',
+						height: '200px', 
+						width: '200px', 
+						opacity: '0.5'
+					});
+				});
+				$("#div8").click(function(event) {
+					$(this).animate({
+						left: '250px',
+						height: '+=200px', 
+						width: '+=200px', 
+						opacity: '0.5'
+					});
+				});
+				$("#btn10").click(function(event) {
+					$("#div9").animate({
+						left: '250px',
+						height: 'toggle', 
+						width: 'toggle'
+					});
+				});
+				$("#btn11").click(function(event) {
+					var div = $("#div10");
+					div.animate({ height: '300px', width: '300px', opacity: '0.8'}, "slow");
+					div.animate({ height: '80px', width: '80px', opacity: '0.50'}, "slow");
+					div.animate({ height: '300px', width: '300px', opacity: '0.8'}, "slow");
+					div.animate({ height: '80px', width: '80px', opacity: '1'}, "slow");
+				});
+			});
+		</script>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h3>Stop Sliding</h3>
+			<div class="text-center">
+				<div id="div11a" style="padding: 5px; background-color: #e5eecc;border: solid 1px;">
+				Click me to slide down!
+			</div>
+			<div id="div11b" style="padding: 50px; display: none; background-color: #e5eecc; border: solid 1px;">
+				Hello World!
+			</div>
+			<button id="btn12" class="btn btn-danger">Stop</button>	
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#div11a").click(function(event) {
+					$("#div11b").slideToggle(4000);
+				});
+				$("#btn12").click(function(event) {
+					$("#div11b").stop();
+				});
+			});
+		</script>
+		<h3>Callback Function</h3>
+		<button id="btn13" class="btn btn-success">Klik</button>
+		<p id="p10">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#btn13").click(function(event) {
+					$("#p10").hide('slow', function() {
+						alert("Tersembunyi");
+					});
+				});
+			});
+		</script>
+		<h3>Chaining</h3>
+		<button id="btn14" class="btn btn-primary">Klik</button>
+		<p id="p11">
+			Run multiple JQuery command on a element.
+			<br>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#btn14").click(function(event) {
+					$("#p11").css("color", "blue")
+						.hide("slow")
+						.show("slow",function(){
+							alert("Show Again");
+					});
+				});
+			});
+		</script>
+
+		<h3>DOM</h3>
+		<p id="p12">Stands for <b>Document Object Model</b></p>
+		<button id="btn15a" type="button" class="btn btn-primary">Get Text</button>
+		<button id="btn15b" type="button" class="btn btn-success">Get HTML</button>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#btn15a").click(function(event) {
+					alert( "Isi text: " + $("#p12").text());
+				});
+				$("#btn15b").click(function(event) {
+					alert( "Isi HTML: " + $("#p12").html());
+				});
+			});
+		</script>
+		<br>
+		<br>
+		<div class="form-group">
+			<label>Insert some value:</label>
+			<input id="txt3" type="text" class="form-control" name="">
+		</div>
+		<button id="btn15c" type="button" class="btn btn-warning">Get Value</button>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#btn15c").click(function(event) {
+					alert("The value is " + $("#txt3").val());
+				});
+			});
+		</script>
+		<br>
+		<br>
+		<p>Get Attr is used to get value from href attribute.</p>
+		<a id="href1" href="www.facebook.com">This is the link.</a>
+		<br>
+		<button id="btn15d" class="btn btn-primary">Get Attr</button>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#btn15d").click(function(event) {
+					alert($("#href1").attr("href"));
+				});
+			});
+		</script>
+		<h3>DOM SET TEXT, HTML, VALUE</h3>
+		<p id="p13a">Set text aku donk!</p>
+		<p id="p13b">Buat aku pakai HTML nya juga</p>
+		<div class="form-group">
+			<input type="text" name="" id="txt4" class="form-control" value="Ajep ajep" required="required" pattern="" title="">
+		</div>
+		<button id="btn16a" class="btn btn-primary">Set Text</button>
+		<button id="btn16b" class="btn btn-success">Set HTML</button>
+		<button id="btn16c" class="btn btn-warning">Set Value</button>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#btn16a").click(function(event) {
+					$("#p13a").text("You got it!");
+				});
+				$("#btn16b").click(function(event) {
+					$("#p13b").html("<b><i>Wow Thank You</i></b>");
+				});
+				$("#btn16c").click(function(event) {
+					$("#txt4").val("Jegluk jegluk");
+				});
+			});
+		</script>
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+	
+	
+	<div class="clearfix"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<!-- footer -->
+	<nav class="navbar navbar-default" style="bottom: 0; margin: 0">
+		<div class="container">
+			<center>
+				<ul class="nav navbar-nav">
+					<li><a href="#">copyright @ 2018. All rights reserved.</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Develop by ...</a></li>
+				</ul>
+			</center>
+		</div>
+	</nav>
+	<!-- akhir footer -->
+</body>
+</html>

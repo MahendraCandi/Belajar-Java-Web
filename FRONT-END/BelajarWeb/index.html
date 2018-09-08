@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstra.min.js"></script>
+	<script type="text/javascript">
+		function demo5(){
+			document.getElementById("demo5").innerHTML="Merubah paragraf";
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="text-center col-md-8 col-md-offset-2">
+			<h1>Belajar JavaScript</h1>
+			<hr size="10px" style="height: 30px">
+		</div>
+
+		<div class="clearfix"></div>
+
+		<!-- latihan 1 -->
+		<p id="demo">
+			JavaScript bisa merubah konten HTML.
+		</p>
+		<button type="button" class="btn btn-danger" onclick="document.getElementById('demo').innerHTML='Hello JavaScript!'">
+			Tes
+		</button>
+		<br>
+		<br>
+		<p id="demo2">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<button type="button" class="btn btn-primary" onclick="document.getElementById('demo2').style.fontSize = '18px'">
+			Font Size
+		</button>
+		<br>
+		<br>
+		<p id="demo3" style="font-size: 18px; font-style: bold">
+			Belajar JavaScript
+		</p>
+		<button type="button" class="btn btn-primary" onclick="document.getElementById('demo3').style.display = 'none'">
+			Display 'none'
+		</button>
+		<br>
+		<br>
+		<p>
+			Tampilkan HTML yg terhidden (display: 'none')
+		</p>
+		<p id="demo4" style="display: none">
+			Hello JavaScript
+		</p>
+		<button class="btn btn-primary" onclick="document.getElementById('demo4').style.display='block'">Tampilkan</button>
+		<br>
+		<br>
+		<h3>JavaScript in Head</h3>
+		<p id="demo5">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<button class="btn btn-primary" onclick="demo5()">Click</button>
+		<br>
+		<br>
+		<h3>Document Write</h3>
+		<p>Hampir sama kaya System.out.print</p>
+		<script type="text/javascript">
+			document.write("Hello JavaScript");
+		</script>
+		<p>Document.write digunakan dalam button</p>
+		<button class="btn btn-primary" onclick="document.write('Hello JavaScript')">Click</button>
+		<br>
+		<br>
+		<h3>Window Alert</h3>
+		<button class="btn btn-primary" onclick="window.alert('Hello JavaScript')">
+			Click
+		</button>
+		<br>
+		<br>
+		<h3>Console Log</h3>
+		<h5>Buka debugging menu F12</h5>
+		<p>
+			Select "Console"
+		</p>
+		<button class="btn btn-primary" onclick = "console.log('Hello JavaScript')">
+			Click
+		</button>
+
+		<!-- JavaScript Statement -->
+		<h3>JavaScript Statement</h3>
+		<p>
+			Membuat perhitungan dengan JavaScript
+		</p>
+		<p id="demo6"></p>
+		<script type="text/javascript">
+			var x,y,z;
+			x=10;
+			y=15;
+			z=x+y;
+			document.getElementById("demo6").innerHTML = "Sama dengan = " +z;
+		</script>
+
+		<br>
+		<br>
+
+		<p>Code block {}.</p>
+		<p id="demo7a"></p>
+		<p id="demo7b"></p>
+		<button class="btn btn-primary" type="button" onclick="demo7()">Klik</button>
+		<script type="text/javascript">
+			function demo7(){
+ 				document.getElementById("demo7a").innerHTML = "Hello";
+				document.getElementById("demo7b").innerHTML = "JavaScript";
+			}
+		</script>
+		<br>
+		<br>
+		<p>Menyimpan variabel</p>
+		<p id="demo8"></p>
+		<button type="button" class="btn btn-primary" onclick="tes()">Tes</button>
+		<script type="text/javascript">
+			var car = "Mobil ", 
+			jumlah = 3;
+
+			function tes(){
+				document.getElementById("demo8").innerHTML = car + jumlah;
+			}
+		</script>
+		<!-- /JavaScript Statement -->
+
+		<br>
+		<br>
+
+		<!-- object -->
+		<h3>Membuat Object dan propertiesnya</h3>
+		<p>
+			Membuat Object <b>person</b> dan membuat properties berupa
+			firstName, lastName, age, skinColor.
+			<br>
+			Dan membuat method didalam object tersebut.
+		</p>
+		<p id="demo9"></p>
+		<p id="demo9a"></p>
+		<button type="button" class="btn btn-primary" onclick="tess()">Klik</button>
+		<script type="text/javascript">
+			//membuat object
+			var person = {
+				firstName : "Candi",
+				lastName : "Mahendra",
+				age : 19,
+				skinColor : "sawo",
+				fullName : function(){
+					return this.firstName + " " + this.lastName;
+				}
+			};
+
+			//membuat function
+			function tess(){
+				document.getElementById("demo9").innerHTML = 
+				"Nama : " + person.firstName + " " + person.lastName +
+				" umur " + person.age + " mempunyai warna kulit " + person.skinColor;
+				document.getElementById("demo9a").innerHTML = person.fullName();
+			}
+		</script>
+		<!-- /object -->
+
+		<!-- JSON -->
+		<h3>JSON</h3>
+		<h4>JSON stands for JavaScript Object Notation</h4>
+		<p>
+			Used for get data from web server to web page
+		</p>
+		<p id="demo10"></p>
+		<button type="button" class="btn btn-primary" onclick="demotes()">Klik</button>
+		<script type="text/javascript">
+			var text = '{"karyawan" : [' + 
+			'{ "firstName" : "Candi", "lastName" : "Mahendra" },'+
+			'{ "firstName" : "Anna" , "lastName" : "Smith"}    ,'+ 
+			'{ "firstName" : "Peter", "lastName" : "Jones"}]}';
+
+			obj = JSON.parse(text);
+			function demotes(){
+				document.getElementById("demo10").innerHTML = 
+				obj.karyawan[0].firstName + " " + obj.karyawan[0].lastName + " "+
+				obj.karyawan[1].firstName + " " + obj.karyawan[1].lastName + " "+
+				obj.karyawan[2].firstName + " " + obj.karyawan[2].lastName;
+			}
+		</script>
+	</div>
+</body>
+</html>

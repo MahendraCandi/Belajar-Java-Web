@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>Belajar Bootstrap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/myCSS.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<!-- navigasi bar -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">
+					TESSSS
+					<a class="navbar-right"><img src="gambar/1.jpg" class="img-circle" width="27px"></a>
+				</a>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#home">Home</a></li>
+				<li><a href="#">Tutorial</a></li>
+				<li><a href="#">Bootstrap</a></li>
+				<li><a href="#">About</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
+						<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Submenu 1-1</a></li>
+						<li><a href="#">Submenu 1-2</a></li>
+						<li><a href="#">Submenu 1-3</a></li>
+					</ul>
+				</li>
+				<li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+				<li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Daftar</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- navigasi bar responsive -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Responsive Collapse</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Profil</a></li>
+					<li><a href="#">Tentang Kami</a></li>
+					<li><a href="#">Kontak</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							Tutorial
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">HTML</a></li>
+							<li><a href="#">CSS</a></li>
+							<li><a href="#">Bootstrap</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- navigasi tabs -->
+	<div class="container">
+		<ul class="nav nav-tabs"> 
+			<li class="active"><a href="#home">Home</a></li>
+			<li><a href="#">Tutorial</a></li>
+			<li><a href="#">Bootstrap</a></li>
+			<li><a href="#">About</a></li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
+					<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Submenu 1-1</a></li>
+					<li><a href="#">Submenu 1-2</a></li>
+					<li><a href="#">Submenu 1-3</a></li>
+				</ul>
+			</li>
+			<li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+			<li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+		</ul>
+		<br>
+
+		<!-- navigasi pills -->
+		<ul class="nav nav-pills">
+			<li class="active"><a href="#home">Home</a></li>
+			<li><a href="#">Navigasi</a></li>
+			<li><a href="#">Pills</a></li>
+			<li class="dropdown">
+				<a href="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
+					<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+						<li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+					</ul>
+			</li>
+		</ul>
+		<br>
+
+		<ul class="nav nav-pills nav-stacked">
+			<li class="active"><a href="#home">Home</a></li>
+			<li><a href="#">Navigasi</a></li>
+			<li><a href="#">Pills</a></li>
+			<li class="dropdown">
+				<a href="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
+					<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+						<li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+					</ul>
+			</li>
+		</ul>
+	</div>
+	<br>
+
+	<!-- tab-content -->
+	<div class="container">
+		<div class="tab-content">
+			<div id=menu2 class="tab-pane in active">
+				<h3>Menu 2</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+			<div id="menu3" class="tab-pane fade">
+				<h3>Menu 3</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- jumbtron -->
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Belajar Bootstrap</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+				<button class="btn btn-primary">Tombol Biru</button>
+				<button class="btn btn-danger">Tombol Merah</button>
+			</p>
+		</div>
+	</div>
+	
+	
+	<!-- table -->
+	<div class="table-responsive">
+		<table class="table table-bordered table-striped table-hover">
+			<thead>
+				<tr class="success">
+					<th>No</th>
+					<th>Judul</th>
+					<th>Band</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="info" width="5px">1</td>
+					<td>Tornado of Souls</td>
+					<td class="warning">Megadeath</td>
+				</tr>
+				<tr>
+					<td class="info" width="5px">2</td>
+					<td>Master of Puppets</td>
+					<td class="warning">Metalica</td>
+				</tr>
+				<tr>
+					<td class="info" width="5px">3</td>
+					<td>What A Horrible Night To Have A Curse</td>
+					<td class="warning">The Black Dahlia Murder</td>
+				</tr>
+				<tr>
+					<td class="info" width="5px">4</td>
+					<td>Walk With Me In Hell</td>
+					<td class="warning">Lamb Of God</td>
+				</tr>
+				<tr>
+					<td class="info" width="5px">5</td>
+					<td>Cowboy From Hell</td>
+					<td class="warning">Pantera</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br>
+	<br>
+	<br>
+
+	<!-- gambar -->
+	<img src="gambar/1.jpg" class="img-thumbnail" alt="Gambar" width="200">
+	<img src="gambar/2.jpg" class="img-circle" alt="Gambar" width="200">
+	<img src="gambar/3.jpg" class="img-rounded" alt="Gambar" width="200">
+	<img src="gambar/4.jpg" class="img-responsive" alt="Gambar" width="">
+	<br>
+	<br>
+	<br>
+
+	<!-- tombol -->
+	<button class="btn btn-danger">Tombol Merah</button>
+	<button class="btn btn-primary">Tombol Biru</button>
+	<br>
+	<br>
+	<a href="#" class="btn btn-success btn-lg">Tombol</a>
+	<a href="#" class="btn btn-success btn-md">Tombol</a>
+	<a href="#" class="btn btn-success btn-sm">Tombol</a>
+	<a href="#" class="btn btn-success btn-xs">Tombol</a>
+	<br>
+	<br>
+	<a href="#" class="btn btn-primary btn-lg">Tombol</a>
+	<a href="#" class="btn btn-primary btn-md">Tombol</a>
+	<a href="#" class="btn btn-primary btn-sm">Tombol</a>
+	<a href="#" class="btn btn-primary btn-xs">Tombol</a>
+	<br>
+	<br>
+	<a href="#" class="btn btn-info btn-lg">Tombol</a>
+	<a href="#" class="btn btn-info btn-md">Tombol</a>
+	<a href="#" class="btn btn-info btn-sm">Tombol</a>
+	<a href="#" class="btn btn-info btn-xs">Tombol</a>
+	<br>
+	<br>
+	<a href="#" class="btn btn-danger btn-lg">Tombol</a>
+	<a href="#" class="btn btn-danger btn-md">Tombol</a>
+	<a href="#" class="btn btn-danger btn-sm">Tombol</a>
+	<a href="#" class="btn btn-danger btn-xs">Tombol</a>
+	<br>
+	<br>
+	<a href="#" class="btn btn-warning btn-lg">Tombol</a>
+	<a href="#" class="btn btn-warning btn-md">Tombol</a>
+	<a href="#" class="btn btn-warning btn-sm">Tombol</a>
+	<a href="#" class="btn btn-warning btn-xs">Tombol</a>
+	<br>
+	<br>
+	<a href="#" class="btn btn-default btn-lg">Tombol</a>
+	<a href="#" class="btn btn-default btn-md">Tombol</a>
+	<a href="#" class="btn btn-default btn-sm">Tombol</a>
+	<a href="#" class="btn btn-default btn-xs">Tombol</a>
+	<br>
+	<br>
+	<br>
+
+	<!-- alert -->
+	<div class="container">
+		<div class="alert alert-success">Pesan Alert Sukses</div>
+		<div class="alert alert-info">Pesan Alert Info</div>
+		<div class="alert alert-warning">Pesan Alert Warning</div>
+		<div class="alert alert-danger">Pesan Alert Danger</div>
+	</div>
+	<br>
+	<br>
+	<div class="container">
+		<div class="alert alert-success fade in">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			Pesan Alert Sukses
+		</div>
+		<div class="alert alert-info fade in">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			Pesan Alert Info
+		</div>
+		<div class="alert alert-warning">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			Pesan Alert Warning
+		</div>
+		<div class="alert alert-danger fade in">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			Pesan Alert Danger
+		</div>
+	</div>
+
+	<!-- icon glyphicon -->
+	<div class="container">
+		<p>Icon surat: <span class="glyphicon glyphicon-envelope"></span></p>
+		<p>
+			Icon surat sebagai link:
+			<a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+		</p>
+		<p>
+			Icon hati di atas tombol:
+			<button type="button" class="btn btn-primary">
+				<span class="glyphicon glyphicon-search"></span>
+			</button>	
+		</p>
+		<p>
+			Icon print: <span class="glyphicon glyphicon-print"></span>
+		</p>
+		<p>
+			Icon love tombol besar ("btn-lg"):
+			<a href="#" class="btn btn-success btn-lg">
+				<span class="glyphicon glyphicon-heart"></span>
+			</a>
+		</p>
+	</div>
+
+	<!-- pagination dan breadcrumb part 8-->
+	<div class="container">
+		<ul class="pagination pagination-sm">
+			<li class="active"><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li class="disabled"><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+		</ul>
+		<br>
+		<ul class="pagination">
+			<li><a href="#">1</a></li>
+			<li class="active"><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li class="disabled"><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+		</ul>
+		<br>
+		<ul class="pagination pagination-lg">
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li class="active"><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li class="disabled"><a href="#">5</a></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<ul class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Tutorial</a></li>
+			<li><a href="#">Bootstrap</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Career</a></li>
+		</ul>
+	</div>
+
+	<!-- list -->
+	<div class="container">
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-success"><a href="#">Megadeath</a></li>
+			<li class="list-group-item list-group-item-warning"><a href="#">Metalica</a></li>
+			<li class="list-group-item list-group-item-danger"><a href="#">The Black Dahlia Murder</a></li>
+			<li class="list-group-item list-group-item-info"><a href="#">Lamb Of God</a></li>
+			<li class="list-group-item"><a href="#">Pantera</a></li>
+		</ul>
+		<br>
+		<br>
+		<ul class="list-group">
+			<li class="list-group-item list-group-item-success"><a href="#"><span class="badge pull-right">14</span>Megadeath</a></li>
+			<li class="list-group-item list-group-item-warning"><a href="#"><span class="badge pull-right">28</span>Metalica</a></li>
+			<li class="list-group-item list-group-item-danger"><a href="#"><span class="badge pull-right">2</span>The Black Dahlia Murder</a></li>
+			<li class="list-group-item list-group-item-info"><a href="#"><span class="badge pull-right">45</span>Lamb Of God</a></li>
+			<li class="list-group-item"><a href="#"><span class="badge pull-right">30</span>Pantera</a></li>
+		</ul>
+	</div>
+
+	<!-- panel -->
+	<div class="container">
+		<div class="panel-default">
+			<div class="panel-heading">
+				<h1>Panel Heading</h1>
+			</div>
+			<div class="panel-body">
+				<h3>Panel Body</h3>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+			<div class="panel-footer">
+				Footer
+				&copy;Belajar Bootstrap<span class="glyphicon glyphicon-heart"></span>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="container">
+		<div class="panel-default">
+			<div class="panel-heading">
+				<b>Panel Default</b>
+			</div>
+			<div class="panel-body">
+				<p>Panel default dengan Bootstrap</p>
+			</div>
+		</div>
+		<br>
+		<div class="panel-success">
+			<div class="panel-heading">
+				<b>Panel Success</b>
+			</div>
+			<div class="panel-body">
+				<p>Panel Success dengan Bootstrap</p>
+			</div>
+		</div>
+		<br>
+		<div class="panel-warning">
+			<div class="panel-heading">
+				<b>Panel Warning</b>
+			</div>
+			<div class="panel-body">
+				<p>Panel Warning dengan Bootstrap</p>
+			</div>
+		</div>
+		<br>
+		<div class="panel-info">
+			<div class="panel-heading">
+				<b>Panel Info</b>
+			</div>
+			<div class="panel-body">
+				<p>Panel info dengan Bootstrap</p>
+			</div>
+		</div>
+		<br>
+		<div class="panel-danger">
+			<div class="panel-heading">
+				<b>Panel Danger</b>
+			</div>
+			<div class="panel-body">
+				<p>Panel danger dengan Bootstrap</p>
+			</div>
+		</div>	
+	</div>
+	<br>
+	<br>
+
+	<!-- form  vertikal -->
+	<div class="container">
+		<h3>Form Vertikal</h3>
+		<form>
+			<div class="form-group">
+				<label for="nama">Nama Anda:</label>
+				<input type="text" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="alamat">Alamat:</label>
+				<input type="text" class="form-control" name="">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+
+	<!-- form inline -->
+	<div class="container">
+		<form class="form-inline">
+			<h3>Form Inline</h3>
+			<div class="form-group">
+				<label for="nama">Nama Anda:</label>
+				<input type="text" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="alamat">Alamat Anda:</label>
+				<input type="text" class="form-control">
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+	<br>
+	<br>
+
+	<!-- form horizontal -->
+	<div class="container">
+		<form class="form-horizontal">
+			<h3>Form Horizontal</h3>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="nama">Nama Anda:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="nama">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2">Alamat</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="alamat">
+				</div>
+			</div>
+			<button type="submit" class="btn btn-danger">Submit</button>
+		</form>
+	</div>
+	<br>
+	<br>
+	<!-- form tes -->
+	<div class="container">
+		<h3>Form Tes</h3>
+		<form>
+			<div class="form-group">
+				<label for="nama">Nama Anda:</label>
+				<input type="text" class="form-control" id="nama">
+			</div>
+			<div class="form-group">
+				 <label for="alamat">Alamat Anda:</label>
+				 <textarea class="form-control" id="alamat"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="kelamin">Jenis Kelamin:</label>
+				<select id="jk" class="form-control">
+					<option>Pria</option>
+					<option>Wanita</option>
+				</select>
+			</div>
+			<button type="submit" class="btn btn-success">Submit</button>
+		</form>
+	</div> <!-- akhir formtes -->
+	<br>
+	<br>
+	<!-- carousel -->
+	<div class="container">
+		<h3>Carousel</h3>
+		<div class="col-md-8 col-md-offset-2">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				
+				<!-- indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+
+				<!-- deklarasi carousel -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img src="gambar/gambar1.jpg" alt="gambar 1">
+						<div class="carousel-caption">
+							<h3>Bootstrap Carousel</h3>
+							<p>Belajar Bootstrap gambar 1</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="gambar/gambar2.jpg" alt="gambar 2" width="900px" height="600px">
+						<div class="carousel-caption">
+							<h3>Bootstrap Carousel</h3>
+							<p>Belajar Bootstrap gambar 2</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="gambar/gambar3.jpg" alt="gambar 3" width="900px" height="600px">
+						<div class="carousel-caption">
+							<h3>Bootstrap Carousel</h3>
+							<p>Belajar Bootstrap gambar 3</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- membuat panah next dan previous -->
+				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- akhir carousel -->
+	<br>
+	<br>
+	<!-- modal -->
+	<div class="container">
+		<h3>Modal</h3>
+		<!-- tombol -->
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Buka Modal</button>
+		
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<!-- konten modal -->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-tittle">Heading Modal</h4>
+					</div>
+					<div class="modal-body">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Tutup Modal</button>
+					</div>
+				</div>
+				<!-- akhir konten model -->
+			</div>
+		</div>
+	</div>
+	<!-- akhir modal -->
+	<br>
+	<br>
+	<!-- grid system -->
+	<h3>Grid System</h3>
+	<div class="coba col-md-12">col-md-12</div>
+	<div class="coba col-md-6">col-md-6</div>
+	<div class="coba col-md-6">col-md-6</div>
+	<div class="coba col-md-4">col-md-4</div>
+	<div class="coba col-md-4">col-md-4</div>
+	<div class="coba col-md-4">col-md-4</div>
+	<div class="coba col-md-3">col-md-3</div>
+	<div class="coba col-md-3">col-md-3</div>
+	<div class="coba col-md-3">col-md-3</div>
+	<div class="coba col-md-3">col-md-3</div>
+	<div class="coba col-md-2">col-md-2</div>
+	<div class="coba col-md-2">col-md-2</div>
+	<div class="coba col-md-2">col-md-2</div>
+	<div class="coba col-md-2">col-md-2</div>
+	<div class="coba col-md-2">col-md-2</div>
+	<div class="coba col-md-2">col-md-2</div>
+	<div class="coba col-md-1">col-md-1</div>
+	<div class="coba col-md-1">col-md-1</div>
+	<div class="coba col-md-1">col-md-1</div>
+	<div class="coba col-md-1">col-md-1</div>
+	<div class="coba col-md-1">col-md-1</div>
+	<div class="coba col-md-1">col-md-1</div>
+	<div class="coba col-md-1">col-md-1</div>
+	<div class="coba col-md-1">col-md-1</div>
+	<div class="coba col-md-1">col-md-1</div>
+	<div class="coba col-md-1">col-md-1</div>
+	<div class="coba col-md-1">col-md-1</div>
+	<div class="coba col-md-1">col-md-1</div>
+	<!-- pembatas -->
+	<div class="col-md-12">
+		<br>
+		<br>
+	</div>
+	<!-- /pembatas -->
+	<div class="col-md-12 col-xs-12 coba">Header</div>
+	<div class="col-md-10 col-xs-12 coba konten">Konten</div>
+	<div class="col-md-2 col-xs-12 coba sidebar">Sidebar</div>
+	<div class="col-md-12 col-xs-12 coba">Footer</div>
+	<!-- /grid system -->
+</body>
+</html>
