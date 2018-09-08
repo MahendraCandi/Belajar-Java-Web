@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 30, 2018 11:09:35 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mahendra.candi.model.Mahasiswa" table="MAHASISWA" catalog="dbhibernate" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nama" type="string">
+            <column name="nama" length="20" />
+        </property>
+        <property name="jurusan" type="string">
+            <column name="jurusan" length="20" />
+        </property>
+        <property name="ipk" type="java.lang.Double">
+            <column name="ipk" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1"
+  metadata-complete="true">
+
+  <display-name>Aplikasi HIbernate 1</display-name>
+  <description>
+     Belajar Hibernate 1, sumber: Tutorial Point
+  </description>
+
+  <servlet>
+  	<servlet-name>MahasiswaServlet</servlet-name>
+  	<servlet-class>com.mahendra.candi.controller.MahasiswaServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>MataKuliahServlet</servlet-name>
+    <servlet-class>com.mahendra.candi.controller.MataKuliahServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  	<servlet-name>MahasiswaServlet</servlet-name>
+  	<url-pattern>/MahasiswaServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>MataKuliahServlet</servlet-name>
+    <url-pattern>/MataKuliahServlet</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+  	index.jsp
+  </welcome-file-list>
+
+</web-app>

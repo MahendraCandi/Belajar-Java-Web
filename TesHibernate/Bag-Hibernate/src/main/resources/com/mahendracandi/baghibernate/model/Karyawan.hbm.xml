@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC 
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.mahendracandi.baghibernate.model.Karyawan" table="KARYAWAN" catalog="dbbaghibernate" optimistic-lock="version">
+		<id name="idKaryawan" type="string">
+			<column name="idkaryawan" length="10"/>
+			<generator class="assigned"/>
+		</id>
+		<property name="namaKaryawan" type="string">
+			<column name="nama" length="30" not-null="true"/>
+		</property>
+		<property name="gaji" type="double">
+			<column name="gaji" not-null="true"/>
+		</property>
+
+		<bag name="sertifikat" cascade="all">
+			<key column="karyawan_id" not-null="true" />
+			<one-to-many class="com.mahendracandi.baghibernate.model.Sertifikat"/>
+		</bag>
+	</class>
+
+	<class name="com.mahendracandi.baghibernate.model.Sertifikat" table="SERTIFIKAT" catalog="dbbaghibernate" optimistic-lock="version">
+		<id name="idSertifikat" type="int">
+			<column name="idsertifikat"/>
+			<generator class="identity"/>
+		</id>
+		<property name="nama" type="string">
+			<column name="nama" length="30"/>
+		</property>
+	</class>
+</hibernate-mapping>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 28, 2018 8:18:08 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mahendracandi.tokobaju.model.Baju" table="Baju" catalog="dbtoko" optimistic-lock="version">
+        <id name="kodeBaju" type="string">
+            <column name="KodeBaju" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="merkBaju" type="string">
+            <column name="MerkBaju" length="30" not-null="true" />
+        </property>
+        <property name="ukuran" type="string">
+            <column name="ukuran" length="5" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

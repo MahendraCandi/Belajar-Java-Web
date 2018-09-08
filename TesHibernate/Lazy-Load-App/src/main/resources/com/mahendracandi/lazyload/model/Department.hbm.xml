@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC 
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.mahendracandi.lazyload.model.Department" table="Department" catalog="dblazy" optimistic-lock="version">
+        <id name="idDepartment" type="integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nameDepartment" type="string">
+            <column name="name" length="30" not-null="true"/>
+        </property>
+        <bag name="student" cascade="all">
+            <key column="department_id" not-null="true"/>
+            <one-to-many class="com.mahendracandi.lazyload.model.Student"/>
+        </bag>
+    </class>
+    
+    <class name="com.mahendracandi.lazyload.model.Student" table="Student" catalog="dblazy" optimistic-lock="version">
+        <id name="idStudent" type="integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nameStudent" type="string">
+            <column name="name" length="30" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

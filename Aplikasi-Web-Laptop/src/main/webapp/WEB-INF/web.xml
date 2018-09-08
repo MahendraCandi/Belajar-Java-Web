@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app metadata-complete="true" version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                       http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <display-name>Aplikasi Web Laptop</display-name>
+    <description>
+     Aplikasi web laptop
+  </description>
+    <context-param>
+        <param-name>TES</param-name>
+        <param-value>tes</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>LaptopServlet</servlet-name>
+        <servlet-class>com.mahendracandi.app.controller.LaptopServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LaptopServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <contex-param>
+        <param-name>URL</param-name>
+        <param-value>jdbc:mysql://localhost/laptopstore</param-value>
+    </contex-param>
+    <contex-param>
+        <param-name>USERNAME</param-name>
+        <param-value>root</param-value>
+    </contex-param>
+    <contex-param>
+        <param-name>PASSWORD</param-name>
+        <param-value>admin</param-value>
+    </contex-param>
+    <contex-param>
+        <param-name>URL</param-name>
+        <param-value>jdbc:mysql://localhost/laptopstore</param-value>
+    </contex-param>
+    <contex-param>
+        <param-name>USERNAME</param-name>
+        <param-value>root</param-value>
+    </contex-param>
+    <contex-param>
+        <param-name>PASSWORD</param-name>
+        <param-value>admin</param-value>
+    </contex-param>
+</web-app>

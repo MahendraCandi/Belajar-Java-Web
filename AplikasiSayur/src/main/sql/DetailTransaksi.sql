@@ -1,0 +1,6 @@
+CREATE TABLE detailtransaksi(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	harga DOUBLE NOT NULL,
+	qty INT NOT NULL,
+	subtotal DOUBLE NOT NULL
+)ENGINE=InnoDB;

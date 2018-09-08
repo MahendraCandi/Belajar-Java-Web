@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1"
+  metadata-complete="true">
+
+  <display-name>Aplikasi Web Database</display-name>
+  <description>
+     Aplikasi web dengan database mysql dari modul BSI
+  </description>
+
+  <servlet>
+		<servlet-name>ProdukSrvCRUD</servlet-name>
+		<servlet-class>com.candi.belajar.controller.ProdukSrvCRUD</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ProdukSrvCRUD</servlet-name>
+		<url-pattern>/ProdukSrvCRUD</url-pattern>
+	</servlet-mapping>
+
+</web-app>

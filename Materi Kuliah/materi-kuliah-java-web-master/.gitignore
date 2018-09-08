@@ -1,0 +1,32 @@
+logs
+
+# Jasper Report
+*.jasper
+
+# IntelliJ IDEA
+*.iml
+.idea
+
+# Eclipse Setting
+/.metadata
+/Servers
+.settings
+.project
+.classpath
+.buildpath
+RemoteSystemsTempFiles
+bin
+org.eclipse.jdt.core.prefs
+
+# Maven
+target
+
+# Netbeans Ignore
+nbproject
+build
+dist
+private
+
+
+# Folder hasil upload
+/sample-code/sesi-05/belajar-springmvc/src/main/webapp/uploads/
